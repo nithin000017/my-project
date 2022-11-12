@@ -1,0 +1,92 @@
+
+<html>
+<head><title>calculator</title>
+<script type="text/javascript">
+
+ function clr()
+  {
+   document.getElementById("disp").value=" "
+   }
+
+ function display(id)
+  {
+   document.getElementById("disp").value+=document.getElementById(id).value
+   }
+
+ function calc()
+  {
+   res=eval(document.getElementById("disp").value)
+   document.getElementById("disp").value=res
+   }
+</script>
+<Style>
+table ,th, td {
+               border:3px solid black;
+               text-align:center;
+               background-color:green;
+	       width:20px;
+               height:5px;
+              
+}
+h1{
+   text-align:center;
+   background-color:green;
+   color:white;
+}
+
+#clear{
+   border-radius:3px;
+   background-color:red;
+}
+#disp{
+   background-color:grey;
+   width:400px;
+   font-size:40px;
+}
+input
+{
+ background-color:orange;
+ color:white;
+ width:100px;
+ height:100px;
+ font-size:20px;
+
+}
+</style>
+</head>
+<body>
+<center>
+<table>
+<tr>
+    <td colspan=4>
+         <input type="text" id="disp" value=" "/>
+    </td>
+</tr>
+<tr>
+   <td><input type= "button" id="seven" value=7 onclick='display(id)'/></td>
+   <td><input type= "button" id="eight" value=8 onclick='display(id)'/></td>
+   <td><input type= "button" id="nine" value=9 onclick='display(id)'/></td>
+   <td><input type= "button" id="add" value='+' onclick='display(id)' /></td>
+</tr>
+<tr>
+   <td><input type= "button" id="four" value=4 onclick='display(id)'/></td>
+   <td><input type= "button" id="three" value=5 onclick='display(id)'/></td>
+   <td><input type= "button" id="six" value=6 onclick='display(id)'/></td>
+   <td><input type= "button" id="sub" value='-' onclick='display(id)'/></td>
+</tr>
+<tr>
+   <td><input type= "button" id="one" value=1 onclick='display(id)'/></td>
+   <td><input type= "button" id="two" value=2 onclick='display(id)'/></td>
+   <td><input type= "button" id="three" value=3 onclick='display(id)'/></td>
+   <td><input type= "button" id="multi" value='*' onclick='display(id)'/></td>
+</tr>
+<tr>
+   <td><input type= "button" id="clear" value='c' onclick='clr()'/></td>
+   <td><input type= "button" id="zero" value=0 onclick='display(id)'/></td>
+   <td><input type= "button" id="equal" value="=" onclick='calc()'/></td>
+   <td><input type= "button" id="divide" value="/" onclick='display(id)'/></td>
+</tr>
+</table>
+</center>
+</body>
+</html>
